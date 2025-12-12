@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAVILLA Cafe - الرئيسية</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #FF69B4;
+            --secondary-color: #FFB6C1;
+            --light-color: #FFF0F5;
+            --dark-color: #C71585;
+            --accent-color: #DB7093;
+            --text-color: #333;
+            --light-text: #fff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--light-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Header */
+        header {
+            background-color: white;
+            padding: 1rem 0;
+            box-shadow: 0 4px 12px rgba(199, 21, 133, 0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Hero Section - الصفحة الرئيسية */
+        .hero-home {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        .logo-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            margin-bottom: 2rem;
+        }
+
+        .logo-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .logo-img {
+            max-width: 300px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(219, 112, 147, 0.2);
+            border: 5px solid white;
+        }
+
+        .welcome-text {
+            max-width: 600px;
+            margin-top: 2rem;
+        }
+
+        .welcome-text h2 {
+            color: var(--dark-color);
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .welcome-text p {
+            font-size: 1.2rem;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .click-instruction {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 1.1rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+
+        /* Footer */
+        footer {
+            background-color: white;
+            color: var(--text-color);
+            padding: 2rem 0 1.5rem;
+            margin-top: auto;
+            border-top: 3px solid var(--secondary-color);
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .footer-logo h3 {
+            color: var(--dark-color);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .footer-links a {
+            color: #666;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--light-color);
+            border-radius: 50%;
+            color: var(--dark-color);
+            transition: all 0.3s;
+        }
+
+        .social-icons a:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 1.5rem;
+            margin-top: 1.5rem;
+            border-top: 1px solid var(--light-color);
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .logo-img {
+                max-width: 250px;
+            }
+            
+            .welcome-text h2 {
+                font-size: 1.8rem;
+            }
+            
+            .welcome-text p {
+                font-size: 1.1rem;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .logo-img {
+                max-width: 200px;
+            }
+            
+            .welcome-text h2 {
+                font-size: 1.5rem;
+            }
+            
+            .click-instruction {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- الصفحة الرئيسية -->
+    <header>
+        <div class="container header-content">
+            <h1>Flower Cafe</h1>
+        </div>
+    </header>
+
+    <main class="hero-home">
+        <div class="container">
+            <button class="logo-btn" id="openMenu">
+                <img src="PicsArt_12-02-08.23.58.jpg" alt="Flower Cafe Logo" class="logo-img"
+                     onerror="this.src='https://via.placeholder.com/300x300/FFB6C1/FFFFFF?text=Flower+Cafe+Logo'">
+            </button>
+            
+            <div class="welcome-text">
+                <h2>Welcome to Flower Cafe</h2>
+                <p>Where flowers meet coffee. Experience the perfect blend of nature's beauty and premium coffee.</p>
+                <p>Click on the logo above to view our menu!</p>
+                
+                <div class="click-instruction">
+                    <i class="fas fa-mouse-pointer"></i>
+                    <span>Click on the logo to open the menu</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Flower Cafe</h3>
+                    <p>Where Flowers Meet Coffee</p>
+                </div>
+                
+                <div class="footer-links">
+                    <a href="menu.html">Menu</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+                
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2024 Flower Cafe. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // عند الضغط على اللوجو، يفتح صفحة المنيو
+        document.getElementById('openMenu').addEventListener('click', function() {
+            window.location.href = 'menu.html';
+        });
+    </script>
+</body>
+</html>
